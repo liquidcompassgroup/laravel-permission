@@ -203,7 +203,7 @@ trait HasRoles
      * @param Model|null $context
      * @return bool
      */
-    public function hasRole($roles, string $guard = null, ?Model $context = null): bool
+    public function hasRole($roles, ?string $guard = null, ?Model $context = null): bool
     {
         if (is_string($roles) && false !== strpos($roles, '|')) {
             $roles = $this->convertPipeToArray($roles);
@@ -263,7 +263,7 @@ trait HasRoles
      * @param  string|null  $guard
      * @return bool
      */
-    public function hasAllRoles($roles, string $guard = null): bool
+    public function hasAllRoles($roles, ?string $guard = null): bool
     {
         if (is_string($roles) && false !== strpos($roles, '|')) {
             $roles = $this->convertPipeToArray($roles);
@@ -297,7 +297,7 @@ trait HasRoles
      * @param  string|null  $guard
      * @return bool
      */
-    public function hasExactRoles($roles, string $guard = null): bool
+    public function hasExactRoles($roles, ?string $guard = null): bool
     {
         if (is_string($roles) && false !== strpos($roles, '|')) {
             $roles = $this->convertPipeToArray($roles);
